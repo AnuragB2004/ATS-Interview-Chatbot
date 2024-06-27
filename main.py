@@ -18,8 +18,8 @@ app = Flask(__name__)
 
 app.secret_key = secrets.token_hex(16)
 
-AZURE_LANGUAGE_ENDPOINT = "https://eychatbot.cognitiveservices.azure.com/"
-AZURE_LANGUAGE_KEY = "c6c221ee17044fa9bf5f3ee1eb105814"
+AZURE_LANGUAGE_ENDPOINT = "YOUR_AZURE_LANGUAGE_ENDPOINT"
+AZURE_LANGUAGE_KEY = "YOUR_AZURE_LANGUAGE_KEY"
 
 # Load environment variables from .env file
 load_dotenv()
@@ -178,36 +178,6 @@ def analyze_answers(job_description, questions, answers):
 
     return percentage, analysis
 
-
-# def main():
-# try:
-#     job_description = input("Enter job description: ")
-#     best_resume, similarity_score = find_best_resume(job_description)
-#     print(f"\nBest matching resume: {best_resume}")
-#     print(f"Similarity score: {similarity_score:.2f}")
-#
-#     candidate_name = input("Enter candidate's name: ")
-#     questions = generate_questions(job_description)
-#
-#     questions, answers = conduct_interview(questions)
-#
-#     print("\nInterview Summary:")
-#     for q, a in zip(questions, answers):
-#         print(f"Q: {q}")
-#         print(f"A: {a}")
-#         print()
-#
-#     percentage, analysis = analyze_answers(job_description, questions, answers)
-#     print("Evaluation:")
-#     print(f"Candidate fit: {percentage}%")
-#     print(f"Analysis: {analysis}")
-#
-# except Exception as e:
-#     print(f"An error occurred: {str(e)}")
-
-
-# Helper functions (preprocess_text, extract_text_from_pdf, calculate_similarity, find_best_resume,
-# generate_questions, analyze_answers) Copy these functions from your original code
 
 @app.route('/')
 def index():
