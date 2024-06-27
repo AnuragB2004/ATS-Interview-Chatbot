@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ATS Scanner</h1>
+        <form id="job-description-form">
+            <textarea id="job-description" placeholder="Enter job description" required></textarea>
+            <button type="submit">Search for Best Resume</button>
+        </form>
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching for the best resume...</p>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Best Matching Resume</h2>
+            <p>File: <span id="best-resume"></span></p>
+            <p>Similarity Score: <span id="similarity-score"></span></p>
+            <button id="start-interview">Start Interview</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

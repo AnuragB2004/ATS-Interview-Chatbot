@@ -1,0 +1,8 @@
+Flask~=3.0.3
+PyPDF2==3.0.1
+nltk==3.6.5
+azure-ai-textanalytics==5.2.0
+python-dotenv~=1.0.1
+scikit-learn~=1.2.2
+transformers~=4.41.0.dev0
+openai~=0.28.0
